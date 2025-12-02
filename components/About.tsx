@@ -102,7 +102,7 @@ const About: React.FC = () => {
                  >
                     <img 
                       src={IMAGES.profile} 
-                      alt="AQI Profile" 
+                      alt="Đặng Hoàng Huy Fishing - AQI Fishing CEO & Pro Angler - Chuyên gia câu cá chuyên nghiệp" 
                       className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -137,28 +137,39 @@ const About: React.FC = () => {
                </span>
              </MotionH2>
 
-             {/* Body Text */}
-             <MotionDiv 
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+             {/* Body Text - Article Content for SEO */}
+             <article 
                 className="space-y-4 md:space-y-6 text-gray-600 text-sm md:text-lg leading-relaxed mb-8 md:mb-10 text-justify md:text-left"
              >
                <p>
-  Từ năm <strong className="text-aqi-black">2017</strong>, khi vừa tốt nghiệp đại học, tôi đã chọn rẽ sang một con đường đầy thử thách: 
-  từ bỏ công việc văn phòng kế toán với mức lương ổn áp để theo đuổi <strong className="text-aqi-black">đam mê thật sự</strong>. 
+  <strong className="text-aqi-black">AQI Fishing</strong> được thành lập bởi <strong className="text-aqi-black">Đặng Hoàng Huy Fishing</strong> - một chuyên gia câu cá chuyên nghiệp với hơn 10 năm kinh nghiệm. 
+  Từ năm <strong className="text-aqi-black">2017</strong>, khi vừa tốt nghiệp đại học, <strong className="text-aqi-black">Đặng Hoàng Huy</strong> đã chọn rẽ sang một con đường đầy thử thách: 
+  từ bỏ công việc văn phòng kế toán với mức lương ổn áp để theo đuổi <strong className="text-aqi-black">đam mê thật sự</strong> với câu cá. 
   Không điểm tựa, không kinh nghiệm, chỉ có niềm tin rằng mình phải sống đúng với điều mình yêu thích và có thể kiếm được tiền để nuôi mình.
 </p>
 
 <p>
-  Chỉ sau <strong className="text-aqi-black">2 năm</strong> miệt mài theo đuổi, tôi chạm đến bước ngoặt lớn đầu tiên 
-  nâng cao chiếc cúp <strong className="text-aqi-black">Vô địch FLC Toàn Quốc 2019</strong>. 
-  Từ khoảnh khắc đó đến nay, hành trình vẫn tiếp tục mở ra những trải nghiệm, những giải đấu và những bài học quý giá 
-  mà tôi luôn sẵn sàng chia sẻ lại với anh em có chung đam mê.
+  <strong className="text-aqi-black">AQI Fishing - Đặng Hoàng Huy Fishing</strong> đã trải qua một hành trình đầy thử thách và thành công. 
+  Chỉ sau <strong className="text-aqi-black">2 năm</strong> miệt mài theo đuổi, <strong className="text-aqi-black">Đặng Hoàng Huy</strong> chạm đến bước ngoặt lớn đầu tiên 
+  khi nâng cao chiếc cúp <strong className="text-aqi-black">Vô địch FLC Toàn Quốc 2019</strong>. 
+  Đây là thành tích đáng tự hào của <strong className="text-aqi-black">AQI Fishing</strong> và <strong className="text-aqi-black">Đặng Hoàng Huy Fishing</strong>, 
+  khẳng định vị thế hàng đầu trong làng câu cá chuyên nghiệp tại Việt Nam.
 </p>
 
-             </MotionDiv>
+<p>
+  Từ khoảnh khắc đó đến nay, <strong className="text-aqi-black">AQI Fishing</strong> vẫn tiếp tục mở ra những trải nghiệm, những giải đấu và những bài học quý giá. 
+  <strong className="text-aqi-black">Đặng Hoàng Huy Fishing</strong> luôn sẵn sàng chia sẻ lại với anh em có chung đam mê về kỹ thuật câu đài, câu game, 
+  và các phương pháp tối ưu để đạt được thành công trong các giải đấu câu cá chuyên nghiệp.
+</p>
+
+<p>
+  <strong className="text-aqi-black">AQI Fishing - Đặng Hoàng Huy Fishing</strong> không chỉ là một thương hiệu, mà còn là một cộng đồng của những người đam mê câu cá. 
+  Với hơn <strong className="text-aqi-black">50+ danh hiệu</strong> và <strong className="text-aqi-black">1000+ hồ câu đã chinh phục</strong>, 
+  <strong className="text-aqi-black">Đặng Hoàng Huy</strong> đã xây dựng <strong className="text-aqi-black">AQI Fishing</strong> thành một địa chỉ tin cậy 
+  cho những ai muốn học hỏi và phát triển kỹ năng câu cá chuyên nghiệp tại Xuân Lộc, Đồng Nai và trên toàn quốc.
+</p>
+
+             </article>
 
              {/* Stats Row - HORIZONTAL ON MOBILE */}
              <MotionDiv 

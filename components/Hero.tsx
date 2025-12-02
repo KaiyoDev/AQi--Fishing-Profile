@@ -183,7 +183,7 @@ const Hero: React.FC = () => {
                   filter: { duration: 0.6 }
                 }}
                 src={imageUrl}
-                alt={`${CEO_DATA.name} - ${CEO_DATA.role} - Hình ảnh ${index + 1}`}
+                alt={`Đặng Hoàng Huy Fishing - AQI Fishing CEO & Pro Angler - ${CEO_DATA.role} - Hình ảnh ${index + 1}`}
                 className="h-[70vh] sm:h-[75vh] md:h-[80%] lg:h-[90%] xl:h-[95%] w-full max-w-full max-h-[70vh] sm:max-h-[75vh] md:max-h-none object-contain object-center md:object-bottom"
                 style={{
                   filter: 'drop-shadow(0 0 20px rgba(217,0,0,0.15)) drop-shadow(-10px 0 30px rgba(0,0,0,0.8))',
@@ -212,7 +212,7 @@ const Hero: React.FC = () => {
         <div className="pt-6 sm:pt-8 md:pt-12 lg:pt-16">
           {/* Description Text - Responsive Sizing */}
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-medium leading-relaxed max-w-xs sm:max-w-lg md:max-w-2xl mx-auto mb-4 sm:mb-6 md:mb-8 drop-shadow-2xl px-2 sm:px-0">
-            <span className="text-aqi-red font-semibold">AQi Fishing</span> Nơi đẳng cấp của 1 cần thủ chuyên nghiệp.
+            <span className="text-aqi-red font-semibold">AQI Fishing - Đặng Hoàng Huy Fishing</span> Nơi đẳng cấp của cần thủ chuyên nghiệp. Chuyên gia câu cá với 10+ năm kinh nghiệm, vô địch FLC 2019.
           </p>
 
           {/* Buttons - Responsive Layout */}

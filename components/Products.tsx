@@ -33,6 +33,14 @@ const Products: React.FC = () => {
     setErrorImages(new Set());
   }, [activeTab]);
 
+  // Ensure currentPage is valid when filteredItems change
+  useEffect(() => {
+    const newTotalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+    if (currentPage > newTotalPages && newTotalPages > 0) {
+      setCurrentPage(1);
+    }
+  }, [filteredItems.length, currentPage]);
+
   // Preload first image of current page for faster loading
   useEffect(() => {
     if (paginatedItems.length > 0 && paginatedItems[0]?.image) {
@@ -101,11 +109,8 @@ const Products: React.FC = () => {
         {/* --- 3. 3D PRODUCT SHOWCASE GRID --- */}
         {/* Mobile: 2 Columns (grid-cols-2), Desktop: 4 Columns */}
         <div id="product-grid" className="min-h-[600px]">
-            <MotionDiv 
-                layout
-                className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8"
-            >
-            <AnimatePresence mode="wait">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
+            <AnimatePresence mode="sync" key={`${activeTab}-${currentPage}`}>
                 {paginatedItems.map((item, index) => {
                     // Ảnh đầu tiên (visible trên màn hình) tải nhanh, còn lại lazy
                     const isFirstImage = index === 0;
@@ -113,8 +118,7 @@ const Products: React.FC = () => {
                     
                     return (
                     <MotionDiv
-                        key={item.id}
-                        layout
+                        key={`${activeTab}-${currentPage}-${item.id}`}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
@@ -218,7 +222,7 @@ const Products: React.FC = () => {
                     );
                 })}
             </AnimatePresence>
-            </MotionDiv>
+            </div>
             
             {/* Empty State */}
             {paginatedItems.length === 0 && (
